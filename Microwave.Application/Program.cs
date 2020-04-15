@@ -12,7 +12,7 @@ namespace Microwave.Application
     {
         static void Main(string[] args)
         {
-            Button startCancelButton = new Button(); //
+            Button startCancelButton = new Button();
             Button powerButton = new Button();
             Button timeButton = new Button();
 
