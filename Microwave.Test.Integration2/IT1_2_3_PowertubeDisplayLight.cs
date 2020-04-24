@@ -46,8 +46,6 @@ namespace Microwave.Test.Integration2
             string ConsoleOutput = _writer.ToString();
             
             Assert.That(ConsoleOutput,Is.EqualTo($"PowerTube works with {power}\r\n"));
-         
-            
         }
 
         [Test]
@@ -62,8 +60,6 @@ namespace Microwave.Test.Integration2
             string ConsoleOutput = _writer.ToString();
 
             Assert.That(ConsoleOutput, Is.EqualTo("PowerTube turned off\r\n"));
-
-
         }
 
 
@@ -126,7 +122,6 @@ namespace Microwave.Test.Integration2
 
          Assert.That(ConsoleOutput, Is.EqualTo($"Display shows: 152 W\r\n"));
       }
-
 
       [Test]
       public void Test_Clear()
