@@ -9,7 +9,7 @@ namespace Microwave.Test.Integration2
 {
 
     [TestFixture]
-    class IT5_CookControl
+    public class IT5_CookControl
     {
     }
 }
