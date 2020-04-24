@@ -100,12 +100,45 @@ namespace Microwave.Test.Integration2
 
 
 
-        #endregion
+      #endregion
 
-        #region Display
+      #region Display
+      [Test]
+      public void Test_ShowTime()
+      {
+         Console.SetOut(_writer);
+
+         _display.ShowTime(10, 5);
+
+         string ConsoleOutput = _writer.ToString();
+
+         Assert.That(ConsoleOutput, Is.EqualTo($"Display shows: 10:05\r\n"));
+      }
+
+      [Test]
+      public void Test_ShowPower()
+      {
+         Console.SetOut(_writer);
+
+         _display.ShowPower(152);
+
+         string ConsoleOutput = _writer.ToString();
+
+         Assert.That(ConsoleOutput, Is.EqualTo($"Display shows: 152 W\r\n"));
+      }
 
 
+      [Test]
+      public void Test_Clear()
+      {
+         Console.SetOut(_writer);
 
-        #endregion
-    }
+         _display.Clear();
+
+         string ConsoleOutput = _writer.ToString();
+
+         Assert.That(ConsoleOutput, Is.EqualTo($"Display cleared\r\n"));
+      }
+      #endregion
+   }
 }
