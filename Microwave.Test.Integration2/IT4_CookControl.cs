@@ -36,7 +36,7 @@ namespace Microwave.Test.Integration2
 
         #region PowerTube
 
-        [TestCase(50)]
+        [TestCase(50)] //Test på console output???
         public void TestCookController_StartCooking_PowerTubeIntegration(int power)
         {
             Console.SetOut(_writer);
@@ -49,7 +49,7 @@ namespace Microwave.Test.Integration2
         }
 
 
-        [Test]
+        [Test]  //Test på console output???
         public void TestCookController_Stop_PowerTubeIntegration()
         {
             _cookController.StartCooking(50, 20);
@@ -68,7 +68,7 @@ namespace Microwave.Test.Integration2
 
         #region Display
 
-        [TestCase(50)]
+        [TestCase(50)] //Spørgsmål til Frank: whiteBox???
         public void TestCookController_OnTimerTick_DisplayIntegration(int remainingTime)
         {
             Console.SetOut(_writer);
