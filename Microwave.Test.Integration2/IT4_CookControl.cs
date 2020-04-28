@@ -8,6 +8,7 @@ using MicrowaveOvenClasses.Boundary;
 using MicrowaveOvenClasses.Controllers;
 using MicrowaveOvenClasses.Interfaces;
 using NSubstitute;
+using NSubstitute.Extensions;
 using NUnit.Framework;
 
 namespace Microwave.Test.Integration2
@@ -26,9 +27,12 @@ namespace Microwave.Test.Integration2
         public void SetUp()
         {
             _output = new Output();
+
             _powerTube = new PowerTube(_output);
             _display = new Display(_output);
+
             _timer = Substitute.For<ITimer>();
+
             _cookController = new CookController(_timer, _display, _powerTube);
             _writer = new StringWriter();
         }
