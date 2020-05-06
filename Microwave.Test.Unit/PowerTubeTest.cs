@@ -19,9 +19,9 @@ namespace Microwave.Test.Unit
             uut = new PowerTube(output);
         }
 
-        [TestCase(1)]
         [TestCase(50)]
         [TestCase(100)]
+        [TestCase(700)] // Ændret efter integrationstest
         public void TurnOn_WasOffCorrectPower_CorrectOutput(int power)
         {
             uut.TurnOn(power);
@@ -31,7 +31,7 @@ namespace Microwave.Test.Unit
         [TestCase(40)]
         [TestCase(49)]
         [TestCase(701)]
-        [TestCase(800)]
+        [TestCase(800)] //Ændret efter integrationstest
         public void TurnOn_WasOffOutOfRangePower_ThrowsException(int power)
         {
             Assert.Throws<System.ArgumentOutOfRangeException>(() => uut.TurnOn(power));
