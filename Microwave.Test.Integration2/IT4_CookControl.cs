@@ -36,7 +36,8 @@ namespace Microwave.Test.Integration2
 
         #region PowerTube
 
-        [TestCase(50)] //Test på console output???
+        [TestCase(50)]
+        [TestCase(700)] //Her har vi fundet en fejl. Før var ranget mellem 1 og 100, men skulle være mellem 50 og 700.
         public void TestCookController_StartCooking_PowerTubeIntegration(int power)
         {
             Console.SetOut(_writer);
@@ -49,7 +50,7 @@ namespace Microwave.Test.Integration2
         }
 
 
-        [Test]  //Test på console output???
+        [Test]  
         public void TestCookController_Stop_PowerTubeIntegration()
         {
             _cookController.StartCooking(50, 20);
@@ -68,7 +69,7 @@ namespace Microwave.Test.Integration2
 
         #region Display
 
-        [TestCase(50)] //Spørgsmål til Frank: whiteBox???
+        [TestCase(50)] 
         public void TestCookController_OnTimerTick_DisplayIntegration(int remainingTime)
         {
             Console.SetOut(_writer);
