@@ -28,11 +28,10 @@ namespace Microwave.Test.Unit
             output.Received().OutputLine(Arg.Is<string>(str => str.Contains($"{power}")));
         }
 
-        [TestCase(-5)]
-        [TestCase(-1)]
-        [TestCase(0)]
-        [TestCase(101)]
-        [TestCase(150)]
+        [TestCase(40)]
+        [TestCase(49)]
+        [TestCase(701)]
+        [TestCase(800)]
         public void TurnOn_WasOffOutOfRangePower_ThrowsException(int power)
         {
             Assert.Throws<System.ArgumentOutOfRangeException>(() => uut.TurnOn(power));
