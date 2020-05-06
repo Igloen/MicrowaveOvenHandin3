@@ -35,7 +35,7 @@ namespace Microwave.Test.Integration2
 
         [TestCase(50)]
         [TestCase(700)]
-        [TestCase(350)]
+        [TestCase(350)] //Værdier rettet her. 
         public void TestPowertube_OutputInRangeTurnOn(int power)
         {
             
