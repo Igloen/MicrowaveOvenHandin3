@@ -34,8 +34,8 @@ namespace Microwave.Test.Integration2
         #region PowerTube
 
         [TestCase(50)]
-        [TestCase(100)]
-        [TestCase(1)]
+        [TestCase(700)]
+        [TestCase(350)]
         public void TestPowertube_OutputInRangeTurnOn(int power)
         {
             
