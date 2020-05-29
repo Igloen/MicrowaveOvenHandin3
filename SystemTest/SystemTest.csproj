@@ -145,11 +145,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\SpecFlowFeature1Steps.cs">
+      <Link>SpecFlowFeature1Steps.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="SpecFlowFeature1.feature" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
